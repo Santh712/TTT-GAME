@@ -16,10 +16,10 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
 
-      - name: Run the container
-        run:
-          docker stop ticgame
-          docker rm ticgame
+      #- name: Run the container
+       # run:
+        #  docker stop ticgame
+         # docker rm ticgame
 
       - name: Update kubeconfig
         run: aws eks --region ap-south-1 update-kubeconfig --name EKS_CLOUD
