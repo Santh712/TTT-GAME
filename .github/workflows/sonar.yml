@@ -36,6 +36,3 @@ jobs:
           docker push santh712/tic-tac-toe:latest
         env:
           DOCKER_CLI_ACI: 1
-
-        
-        run: trivy fs . > trifyfs.txt
