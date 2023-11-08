@@ -21,4 +21,7 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7a8fa4ac733e172ce2f6d0e18937fffd96efd431
