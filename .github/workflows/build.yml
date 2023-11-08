@@ -36,3 +36,6 @@ jobs:
           docker push santh712/tic-tac-toe:latest
         env:
           DOCKER_CLI_ACI: 1
+      - name: Image scan
+        run: trivy image santh712/tic-tac-toe:latest > trivyimage.txt
+     
