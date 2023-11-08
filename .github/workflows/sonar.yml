@@ -25,7 +25,7 @@ jobs:
         run: npm install
         
       - name: Trivy file scan
-        run: trivy fs . > trifyfs.txt
+        run: trivy fs . > trivyfs.txt
 
       - name: Docker build and push
         run: |
