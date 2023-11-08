@@ -39,3 +39,15 @@ jobs:
       - name: Image scan
         run: trivy image santh712/tic-tac-toe:latest > trivyimage.txt
      
+  deploy:
+    needs: build-analyze-scan
+    runs-on: [self-hosted]
+    steps:
+      - name: Pull the Docker image
+        run: docker pull santh712/tic-tac-toe:latest
+
+      - name: Trivy image scan
+        run: trivy image santh712/tic-tac-toe:latest > trivyimagedeploy.txt
+
+      - name: Run the container
+        run: docker run -d --name ticgame -p 3000:3000 santh712/tic-tac-toe:latest
